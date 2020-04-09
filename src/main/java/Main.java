@@ -10,6 +10,7 @@ public class Main {
         if (port!=null){
             PortNo = Integer.parseInt(port);
         }
+        System.out.println("Starting on: " + PortNo);
         Javalin app = Javalin.create().start(PortNo);
         app.get("/api", ctx->{
             ctx.result("Hello!");
